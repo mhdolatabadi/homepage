@@ -1,133 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
+    <title>MohammadHossein's Homepage</title>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Bachelor student of computer engineering at Sharif University of Technology"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta property="og:title" content="MohammadHossein Dolatabadi's Homepage" />
+    <meta
+      property="og:description"
+      content="Bachelor student of computer engineering at Sharif University of Technology"
+    />
+    <meta property="og:image" content="./public/profile-picture.jpg" />
+    <meta property="og:url" content="https://ce.sharif.edu/~mhdolatabadia" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>MohammadHossein's Homepage</title>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="intro container">
-      <img class="profile-picture" src="./public/profile-picture.jpg" />
-      <h1>Mohammad Hossein Dolatabadi</h1>
-      <h3>
-        <a href="http://ce.sharif.edu/">Computer Engineering</a> Student at
-        <a href="https://en.sharif.edu/">Sharif University of Technology</a>
-      </h3>
-      <h6>You may like to read <a href="https://github.com/mhdolatabadi" target="_blank">my introduction</a> on github</h4>
-    </div>
-    <div class="main container">
-      <h1>Education</h1>
-      <div class="content">
-        <section class="section">
-          <img src="./public/sharif.png" />
-          <h3>Sharif University of Technology</h3>
-          <h4><b> 2019-now </b></h4>
-          <p>
-            I'm doing my Bachelor's in computer engineering at
-            <a href="https://en.sharif.edu/" target="_blank">Sharif</a>
-            University of Technology.
-          </p>
-        </section>
-        <section class="section">
-          <img src="./public/sampad.jpg" />
-          <h3>Shahid Babaee Highschool</h3>
-          <h4><bold>2016-2019</bold></h4>
-          <p>
-            I studied Math and Physics at
-            <a
-              href="https://en.wikipedia.org/wiki/Shahid_Babaee_High_School_(Qazvin_Sampad)"
-              target="_blank"
-              >Shahid Babaee</a
-            >
-            highschool which located in Qazvin province.
-          </p>
-        </section>
+    <div style="overflow-y: scroll; height: 100%">
+      <div class="intro container">
+        <img class="profile-picture" src="./public/profile-picture.jpg" />
+        <h1>Mohammad Hossein Dolatabadi</h1>
+        <h3>
+          <a href="http://ce.sharif.edu/">Computer Engineering</a> Student at
+          <a href="https://en.sharif.edu/">Sharif University of Technology</a>
+        </h3>
+        <h6>
+          You may like to read
+          <a href="https://github.com/mhdolatabadi" target="_blank"
+            >my introduction</a
+          >
+          on github
+        </h6>
       </div>
-    </div>
-    <div class="main container">
-      <h1>Work Experience</h1>
-      <div class="content">
-        <section class="section">
-          <img src="./public/weblite.svg" />
-          <h3>Weblite</h3>
-          <h4><b> 2020-2021 </b></h4>
-          <p>
-            I was working at
-            <a href="https://weblite.me" target="_blank">Weblite</a> as
-            part-time full stack developer. Weblite is a platform which recently
-            provides educational tools for students. In Weblite you can easily
-            publish your web app using its kind api.
-          </p>
-        </section>
+      <div class="main container">
+        <header class="major">
+          <h2>education</h2>
+        </header>
+        <div class="content">
+          <section class="section">
+            <img src="./public/sharif.png" />
+            <h3>Sharif University of Technology</h3>
+            <h4><b> 2019-now </b></h4>
+            <p>
+              I'm doing my Bachelor's in computer engineering at
+              <a href="https://en.sharif.edu/" target="_blank">Sharif</a>
+              University of Technology.
+            </p>
+          </section>
+          <section class="section">
+            <img src="./public/sampad.jpg" />
+            <h3>Shahid Babaee Highschool</h3>
+            <h4><bold>2016-2019</bold></h4>
+            <p>
+              I studied Math and Physics at
+              <a
+                href="https://en.wikipedia.org/wiki/Shahid_Babaee_High_School_(Qazvin_Sampad)"
+                target="_blank"
+                >Shahid Babaee</a
+              >
+              highschool which located in Qazvin province.
+            </p>
+          </section>
+        </div>
       </div>
+      <div class="main container">
+        <header class="major">
+          <h2>work experience</h2>
+        </header>
+        <div class="content">
+          <section class="section">
+            <img src="./public/weblite.svg" />
+            <h3>Weblite</h3>
+            <h4><b> 2020-2021 </b></h4>
+            <p>
+              I was working at
+              <a href="https://weblite.me" target="_blank">Weblite</a> as
+              part-time full stack developer. Weblite is a platform which
+              recently provides educational tools for students. In Weblite you
+              can easily publish your web app using its kind api.
+            </p>
+          </section>
+        </div>
+      </div>
+      <div class="skills container">
+        <header class="major">
+          <h2>Interests and Skills</h2>
+        </header>
+        <div class="skills-body">
+          <div class="skill-container">
+            <header class="skill-title">
+              <div class="fas fa-chalkboard-teacher"></div>
+              <div style="margin-left: 10px">Teaching</div>
+            </header>
+            <section class="skill-body">
+              I love teaching. I'm teaching math and physics for highschool
+              students since 3 years ago. Teaching is a part of my life and
+              gives me more energy to do other things.
+            </section>
+          </div>
+          <div class="skill-container">
+            <header class="skill-title">
+              <div class="fas fa-cogs"></div>
+              <div style="margin-left: 10px">Technical Skills</div>
+            </header>
+            <section class="skill-body">
+              I'm experienced in web development(both back-end and front-end). I
+              do many project using javascript frameworks and libraries like
+              Vue.js, React.js, Node.js and Nest.js.
+            </section>
+          </div>
+          <div class="skill-container">
+            <header class="skill-title">
+              <div class="fas fa-code"></div>
+              <div style="margin-left: 10px">Programming</div>
+            </header>
+            <section class="skill-body">
+              Time flies when I do programming. There are few other activities
+              that have the same feeling. I sometimes programming just for fun.
+              There are some programming languages like C, C++, Java, Python and
+              swift i have programed with them but i always prefer javascript.
+            </section>
+          </div>
+          <div class="skill-container">
+            <header class="skill-title">
+              <div class="fas fa-code"></div>
+              <div style="margin-left: 10px">Programming</div>
+            </header>
+            <section class="skill-body">
+              Time flies when I do programming. There are few other activities
+              that have the same feeling. I sometimes programming just for fun.
+              There are some programming languages like C, C++, Java, Python and
+              swift i have programed with them but i always prefer javascript.
+            </section>
+          </div>
+        </div>
+      </div>
+      <footer class="container">
+        <ul class="icons">
+          <p>
+            &copy;2019-2022 MohammadHossein Dolatabadi.<br />You could contact
+            me at mhdolatabadia@ce.sharif.edu
+          </p>
+          <div
+            style="
+              border-left: 1px solid white;
+              border-right: 1px solid white;
+              border-top: 1px solid white;
+            "
+          >
+            <div style="margin-bottom: 20px">
+              Social media: @mhdolatabadi|@mhdolatabadia
+            </div>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/mhdolatabadi"
+                class="fab fa-linkedin"
+                ><span></span
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/mhdolatabadi" class="fab fa-twitter"
+                ><span></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/mhdolatabadi"
+                class="fab fa-instagram"
+                ><span></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://telegram.me/mhdolatabadia"
+                class="fab fa-telegram-plane"
+                ><span></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://stackoverflow.com/users/12337783/mohammadhossein-dolatabadi"
+                class="fab fa-stack-overflow"
+                ><span></span
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/mhdolatabadi" class="fab fa-github"
+                ><span></span
+              ></a>
+            </li>
+          </div>
+        </ul>
+      </footer>
     </div>
-    <footer class="container">
-      <ul class="icons">
-        <div style="color: white; margin-bottom: 20px;">Social media: @mhdolatabadi|@mhdolatabadia</div>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/mhdolatabadi"
-            class="fab fa-linkedin"
-            ><span></span
-          ></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/mhdolatabadi" class="fab fa-twitter"
-            ><span></span
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://instagram.com/mhdolatabadi"
-            class="fab fa-instagram"
-            ><span></span
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://telegram.me/mhdolatabadia"
-            class="fab fa-telegram-plane"
-            ><span></span
-          ></a>
-        </li>
-      </li>
-      <li>
-        <a
-          href="https://stackoverflow.com/users/12337783/mohammadhossein-dolatabadi"
-          class="fab fa-stack-overflow"
-          ><span></span
-        ></a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/mhdolatabadi"
-          class="fab fa-github"
-          ><span></span
-        ></a>
-      </li>
-      </ul>
-    </footer>
   </body>
 </html>

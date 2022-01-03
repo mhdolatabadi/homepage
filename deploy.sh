@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -rf home_page.tar.gz
 echo "Under Deploy..."
 CE_USERNAME=mhdolatabadia
 ls -lh >> lists.txt

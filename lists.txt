@@ -140,3 +140,13 @@ drwxrwxr-x 3 mohammadhossein mohammadhossein 4.0K Dec 23 17:49 css
 drwxrwxr-x 2 mohammadhossein mohammadhossein 4.0K Dec 23 15:07 public
 -rw-rw-r-- 1 mohammadhossein mohammadhossein 3.3K Dec 23 13:25 README.md
 -rw-rw-r-- 1 mohammadhossein mohammadhossein 512K Dec 23 13:25 yarn.lock
+total 588K
+drwxrwxr-x 3 mohammadhossein mohammadhossein 4.0K Dec 23 17:49 css
+-rwxrwxr-x 1 mohammadhossein mohammadhossein  201 Dec 23 18:14 deploy.sh
+-rw-rw-r-- 1 mohammadhossein mohammadhossein 4.3K Jan  3 12:27 index.html
+-rw-rw-r-- 1 mohammadhossein mohammadhossein  35K Dec 23 13:25 LICENSE
+-rw-rw-r-- 1 mohammadhossein mohammadhossein 9.3K Dec 23 17:57 lists.txt
+-rw-rw-r-- 1 mohammadhossein mohammadhossein  947 Dec 23 13:25 package.json
+drwxrwxr-x 2 mohammadhossein mohammadhossein 4.0K Dec 23 15:07 public
+-rw-rw-r-- 1 mohammadhossein mohammadhossein 3.3K Dec 23 13:25 README.md
+-rw-rw-r-- 1 mohammadhossein mohammadhossein 512K Dec 23 13:25 yarn.lock

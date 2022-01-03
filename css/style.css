@@ -1,28 +1,64 @@
 @import url('./fa-solid.min.css');
 @import url('./fontawesome-all.min.css');
+@import url('http://fonts.googleapis.com/css?family=Raleway:100,200,300,500,600,700,800,900');
+
 html {
   -webkit-font-smoothing: auto;
   height: 100%;
   -webkit-overflow-scrolling: touch;
   scrollbar-color: rgba(0, 0, 0, 0.2);
   scrollbar-width: thin;
-  font-family: 'Cascadia Code';
+  font-family: 'Raleway', sans-serif;
+  font-size: 12pt;
+  font-weight: 300;
+  line-height: 1.65em;
 }
+strong,
+b {
+  font-weight: 700;
+}
+ul,
+ol,
+dl,
+table,
+blockquote {
+  margin: 2em 0 0 0;
+}
+
+p {
+  line-height: 2em;
+}
+
+header.major {
+  padding-bottom: 3em;
+  text-transform: uppercase;
+  color: white;
+}
+
+header.major h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  font-weight: 800;
+  font-size: 2.8em;
+}
+
 body {
   margin: 0;
   height: 100%;
-  overflow-y: scroll;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  background: linear-gradient(to bottom left, #fd746c, #23313f);
-  background-repeat: no-repeat;
+  background: url(../public/header5.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  overflow: hidden;
 }
 .intro {
   color: rgba(255, 255, 255, 0.849);
   text-align: center;
 }
 a {
-  color: #23313f;
+  color: white;
 }
 
 .intro > img {
@@ -45,8 +81,8 @@ a {
 
 .main {
   font-weight: bold;
-  color: #2c3e50;
-  background-color: white;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.493);
   margin-top: 100px;
 }
 .main > .content {
@@ -54,7 +90,9 @@ a {
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  width: fit-content;
+  border-radius: 20px 0 20px 0;
 }
 
 .section > * {
@@ -75,8 +113,9 @@ h4 {
   box-sizing: border-box;
   margin: 10px;
   max-width: 400px;
-  height: 330px;
+  height: 350px;
   border-radius: 20px 0 20px 0;
+  background-color: white;
 }
 .section > img {
   margin-bottom: 20px;
@@ -88,10 +127,21 @@ h4 {
   text-align: center;
   font-weight: 400;
   font-size: small;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  height: 200px;
+}
+.section > p::-webkit-scrollbar {
+  display: none;
+}
+.section a {
+  color: black;
 }
 
 footer {
-  background-color: #2c3e50;
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.493);
   color: white;
   display: flex;
   justify-content: center;
@@ -129,12 +179,67 @@ ul.icons li a {
 
 ul.icons li a:before {
   display: inline-block;
-  border: 1px solid #fd746c;
+  border: 1px solid white;
   width: 2em;
   height: 2em;
   line-height: 2em;
   font-size: 1em;
-  color: #fd746c;
+  color: white;
   border-radius: 100%;
   text-align: center;
+  @media screen (width > '') {
+  }
+}
+
+.skills {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.skill-container {
+  margin: 0 25px;
+  margin-bottom: 20px;
+  width: 300px;
+  @media only screen and (max-width: 735px) {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+.skills-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 735px) {
+  .skill-container {
+    width: 100%;
+  }
+  .skills-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.skill-body {
+  color: black;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+  margin: 0 25px;
+}
+.skill-title {
+  display: flex;
+  width: 100%;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+  padding: 5px;
 }
