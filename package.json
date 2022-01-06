@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "MohammadHossein <m.h.dolatabadi.a@gmail.com>",
   "license": "MIT",
+  "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
