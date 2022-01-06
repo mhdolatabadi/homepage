@@ -4,7 +4,7 @@ export function Skill({ icon, title, content }) {
   return (
     <div className="skill-container">
       <header className="skill-title">
-        <div className={`fas fa-${icon}`}></div>
+        <i className={`fas fa-${icon}`}></i>
         <div style={{ marginLeft: '10px' }}>{title}</div>
       </header>
       <section className="skill-body">{content}</section>

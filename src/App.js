@@ -1,4 +1,5 @@
 import './App.css'
+import { DevStory } from './components/dev-story/dev-story'
 import { Footer } from './components/footer'
 import { Header } from './components/header/header'
 import { Section } from './components/section/section'
@@ -138,6 +139,37 @@ const data = {
       content:
         "I enjoy watching every professional sport, especially football. I'm a fan of FC Bayern. I also love playing football games like FIFA (since FIFA98!). I played football computer games most of the time when I was a teenager. Now i love to play futsal with friends(this is another thing which in it time flies:D)",
     },
+    {
+      icon: 'js',
+      title: 'JavaScript',
+      content: (
+        <div>
+          Let start with a sentence from Kyle Simpson:
+          <br /> "When developers encounter confusion, they usually blame the
+          language(JavaScript) instead of their lack of understanding." <br />
+          JS (I prefer to say instead of JavaScript), the language which created
+          in only 10 days but conquer the world, is a language with capability
+          of using in both frontend and backend and I sometimes code in it just
+          for fun!
+        </div>
+      ),
+    },
+    {
+      icon: 'linux',
+      title: 'Linux',
+      content: (
+        <div>
+          I want to start with a sentence from Linus Torvalds: <br />
+          "A computer is like air conditioning, it becomes useless if you open
+          windows."
+          <br /> I've worked with linux since 2020. I prefer it to linux because
+          it is optimal in using system resources as windows doesn't. Also linux
+          is safer than windows and you can monitor everything you want. For me,
+          installation of tools is easier in Linux. All of my needs, meets in
+          Linux, and programming in it is so fun.
+        </div>
+      ),
+    },
   ],
 }
 
@@ -149,6 +181,7 @@ function App() {
         {data.sections.map(({ title, cards }) => (
           <Section title={title} cards={cards} />
         ))}
+        <DevStory />
         <div className="skills container">
           <header className="major">
             <h2>Interests and Skills</h2>
