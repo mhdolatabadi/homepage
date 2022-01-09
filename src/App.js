@@ -176,7 +176,7 @@ const data = {
 function App() {
   return (
     <div className="App">
-      <div style={{ overflowY: 'scroll', height: '100%' }}>
+      <div className="App-body">
         <Header />
         {data.sections.map(({ title, cards }) => (
           <Section title={title} cards={cards} />

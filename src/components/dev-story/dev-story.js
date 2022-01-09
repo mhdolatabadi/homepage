@@ -14,7 +14,7 @@ export function DevStory() {
           </summary>
           <p style={{ marginLeft: '20px' }}>
             <b>
-              My story started in the first grade of high school by coding with
+              <span className="caps">M</span>y story started in the first grade of high school by coding with
               C++ programming language to get ready for the computing olympiad.
               After 2 years, I continued my path, by learning and coding C and
               C++ programming languages in the first days of university. My
