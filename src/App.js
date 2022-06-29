@@ -1,9 +1,8 @@
 import './App.css'
-import { DevStory } from './components/dev-story/dev-story'
-import { Footer } from './components/footer'
-import { Header } from './components/header/header'
-import { Section } from './components/section/section'
-import { Skill } from './components/skill'
+import {Footer} from './components/footer'
+import {Header} from './components/header'
+import {Section} from './components/section'
+import {Skill} from './components/skill'
 
 const data = {
   sections: [
@@ -13,7 +12,7 @@ const data = {
         {
           title: 'Shahid Babaee Highschool',
           duration: '2016-2019',
-          picture: 'sampad.jpg',
+          picture: 'sampad.svg',
 
           content: (
             <p>
@@ -31,7 +30,7 @@ const data = {
         {
           title: 'Sharif University of Technology',
           duration: '2019-now',
-          picture: 'sharif.png',
+          picture: 'sharif.svg',
           content: (
             <p>
               I'm doing my Bachelor's in computer engineering at&nbsp;
@@ -49,7 +48,7 @@ const data = {
       cards: [
         {
           title: 'Weblite',
-          duration: '2020-2021',
+          duration: '2020-2022',
           picture: 'weblite.svg',
 
           content: (
@@ -64,11 +63,84 @@ const data = {
             </p>
           ),
         },
+        {
+          title: 'Sahab',
+          duration: '2022-now',
+          picture: 'sahab.jpg',
+
+          content: (
+            <p>
+              I am working at&nbsp;
+              <a href="https://sahab.weblite.me" target="_blank">
+                Sahab
+              </a>
+              &nbsp; as a part-time full stack developer. Sahab is a lightweight and rapid messenger with many unique
+              features which helps it to be much like a social media.
+            </p>
+          ),
+        },
       ],
     },
     {
       title: 'student works',
       cards: [
+        {
+          title: 'Gamein',
+          duration: '2022',
+          picture: 'gamein.jpeg',
+
+          content: (
+            <p>
+              I was <b>technical staff</b> at&nbsp;
+              {/*<a href="https://wss.ce.sharif.edu/" target="_blank">*/}
+                Gamein
+              {/*</a>*/}
+              &nbsp; as front-end developer of the game client.
+              Gamein is the first challenge in the field of industrial engineering in Iran, held annually by the
+              students of Sharif University of Technology.
+              The purpose of this competition is to get students to go beyond academic education and reach the stage of
+              involving what they learn and to give entrepreneurs the opportunity to test their skills and strategies.
+              This game is a simulation of business and market environment, where you set up your own business, develop
+              it and try to gain more profit so you can get ahead of other competitors and win the game.
+            </p>
+          ),
+        },
+        {
+          title: 'Data Days',
+          duration: '2022',
+          picture: 'datadays.jpeg',
+
+          content: (
+            <p>
+              I was <b>technical staff</b> at&nbsp;
+              {/*<a href="https://wss.ce.sharif.edu/" target="_blank">*/}
+                Data Days
+              {/*</a>*/}
+              &nbsp; as front-end developer of the website. Data Days is the first data science competition of the computer
+              engineering department.
+            </p>
+          ),
+        },
+        {
+          title: 'League of Coders',
+          duration: '2022',
+          picture: 'loc.jpeg',
+
+          content: (
+            <p>
+              I was <b>technical staff</b> at&nbsp;
+              <a href="https://locsharif.com" target="_blank">
+                LoC
+              </a>
+              &nbsp; as the <b>only</b> front-end developer of the website. League of Coders (LOC) is a programming
+              event born
+              at the
+              Computer Engineering Department of the Sharif University of Technology, aiming to create familiarity and
+              increase knowledge of Java programming and topics of hardware, blockchain, and machine learning for
+              computer science and engineering students.
+            </p>
+          ),
+        },
         {
           title: 'Winter Seminar Series',
           duration: '2022',
@@ -76,7 +148,7 @@ const data = {
 
           content: (
             <p>
-              I was technical staff at&nbsp;
+              I was <b>technical staff</b> at&nbsp;
               <a href="https://wss.ce.sharif.edu/" target="_blank">
                 7th WSS
               </a>
@@ -99,7 +171,7 @@ const data = {
           picture: 'aic.jpg',
           content: (
             <p>
-              I was technical staff at&nbsp;
+              I was <b>technical staff</b> at&nbsp;
               <a href="https://wss.ce.sharif.edu/" target="_blank">
                 AIChallenge 2021
               </a>
@@ -145,8 +217,8 @@ const data = {
       content: (
         <div>
           Let start with a sentence from Kyle Simpson:
-          <br /> "When developers encounter confusion, they usually blame the
-          language(JavaScript) instead of their lack of understanding." <br />
+          <br/> "When developers encounter confusion, they usually blame the
+          language(JavaScript) instead of their lack of understanding." <br/>
           JS (I prefer to say instead of JavaScript), the language which created
           in only 10 days but conquer the world, is a language with capability
           of using in both frontend and backend and I sometimes code in it just
@@ -159,10 +231,10 @@ const data = {
       title: 'Linux',
       content: (
         <div>
-          I want to start with a sentence from Linus Torvalds: <br />
+          I want to start with a sentence from Linus Torvalds: <br/>
           "A computer is like air conditioning, it becomes useless if you open
           windows."
-          <br /> I've worked with linux since 2020. I prefer it to linux because
+          <br/> I've worked with linux since 2020. I prefer it to linux because
           it is optimal in using system resources as windows doesn't. Also linux
           is safer than windows and you can monitor everything you want. For me,
           installation of tools is easier in Linux. All of my needs, meets in
@@ -177,22 +249,22 @@ function App() {
   return (
     <div className="App">
       <div className="App-body">
-        <Header />
-        {data.sections.map(({ title, cards }) => (
-          <Section title={title} cards={cards} />
+        <Header/>
+        {data.sections.map(({title, cards}) => (
+          <Section title={title} cards={cards}/>
         ))}
-        <DevStory />
+        {/*<DevStory/>*/}
         <div className="skills container">
           <header className="major">
             <h2>Interests and Skills</h2>
           </header>
           <div className="skills-body">
-            {data.skills.map(({ icon, title, content }) => (
-              <Skill icon={icon} title={title} content={content} />
+            {data.skills.map(({icon, title, content}) => (
+              <Skill icon={icon} title={title} content={content}/>
             ))}
           </div>
         </div>
-        <Footer />
+        <Footer/>
       </div>
     </div>
   )

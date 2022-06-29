@@ -1,17 +1,19 @@
 import React from 'react'
 
-export function Card({ title, duration, content, picture }) {
-  const isEvent = picture === 'wss.jpg' || picture === 'aic.jpg'
+export function Card({title, duration, content, picture}) {
+  // const isEvent = picture === 'wss.jpg' || picture === 'aic.jpg' || picture === 'gamein.jpeg' || picture === 'loc.jpeg' || picture === 'datadays.jpeg' || picture === 'sahab.jpg'
   return (
     <div>
-      <section className={`section ${isEvent ? 'student-work wss aic' : ''}`}>
-        <img src={picture} />
+      <section className="section student-work">
+        <img src={picture} alt={picture}/>
         <h3>{title}</h3>
         <h4>
           <b>{duration}</b>
         </h4>
+
         {content}
       </section>
     </div>
+
   )
 }
