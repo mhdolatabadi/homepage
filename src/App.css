@@ -152,7 +152,6 @@ div::-webkit-scrollbar {
 
 footer {
     margin-top: 100px;
-    background-color: rgba(0, 0, 0, 0.493);
     color: white;
     display: flex;
     justify-content: center;
