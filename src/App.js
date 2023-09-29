@@ -1,8 +1,8 @@
 import './App.css'
-import {Footer} from './components/footer'
-import {Header} from './components/header'
-import {Section} from './components/section'
-import {Skill} from './components/skill'
+import { Footer } from './components/footer'
+import { Header } from './components/header'
+import { Section } from './components/section'
+import { Skill } from './components/skill'
 
 const data = {
   sections: [
@@ -48,7 +48,7 @@ const data = {
       cards: [
         {
           title: 'Weblite',
-          duration: '2020-2022',
+          duration: '2020-2023',
           picture: 'weblite.svg',
 
           content: (
@@ -65,17 +65,19 @@ const data = {
         },
         {
           title: 'Sahab',
-          duration: '2022-now',
-          picture: 'sahab.jpg',
+          duration: '2023-now',
+          picture: 'sahab.jpeg',
 
           content: (
             <p>
               I am working at&nbsp;
-              <a href="https://sahab.weblite.me" target="_blank">
+              <a href="https://sahab.ir" target="_blank">
                 Sahab
               </a>
-              &nbsp; as a part-time full stack developer. Sahab is a lightweight and rapid messenger with many unique
-              features which helps it to be much like a social media.
+              &nbsp; as a part-time backend developer. Relying on a wide range
+              of data-oriented expertise, we can provide solutions for all data
+              needs of organization and businesses. Sahab creates transformation
+              in any organization where there is data and the desire to use it.
             </p>
           ),
         },
@@ -85,6 +87,22 @@ const data = {
       title: 'student works',
       cards: [
         {
+          title: 'Hardwar',
+          duration: '2023',
+          picture: 'hardwar.jpeg',
+
+          content: (
+            <p>
+              I was <b>technical staff</b> at&nbsp;
+              {/*<a href="https://wss.ce.sharif.edu/" target="_blank">*/}
+              Hardwar
+              {/*</a>*/}
+              &nbsp; as front-end developer of event website. Hardwar is a tiny
+              event based on hardware knowledge for bachelor students
+            </p>
+          ),
+        },
+        {
           title: 'Gamein',
           duration: '2022',
           picture: 'gamein.jpeg',
@@ -93,15 +111,11 @@ const data = {
             <p>
               I was <b>technical staff</b> at&nbsp;
               {/*<a href="https://wss.ce.sharif.edu/" target="_blank">*/}
-                Gamein
+              Gamein
               {/*</a>*/}
-              &nbsp; as front-end developer of the game client.
-              Gamein is the first challenge in the field of industrial engineering in Iran, held annually by the
-              students of Sharif University of Technology.
-              The purpose of this competition is to get students to go beyond academic education and reach the stage of
-              involving what they learn and to give entrepreneurs the opportunity to test their skills and strategies.
-              This game is a simulation of business and market environment, where you set up your own business, develop
-              it and try to gain more profit so you can get ahead of other competitors and win the game.
+              &nbsp; as front-end developer of the game client. Gamein is the
+              first challenge in the field of industrial engineering in Iran,
+              held annually by the students of Sharif University of Technology.
             </p>
           ),
         },
@@ -114,10 +128,11 @@ const data = {
             <p>
               I was <b>technical staff</b> at&nbsp;
               {/*<a href="https://wss.ce.sharif.edu/" target="_blank">*/}
-                Data Days
+              Data Days
               {/*</a>*/}
-              &nbsp; as front-end developer of the website. Data Days is the first data science competition of the computer
-              engineering department.
+              &nbsp; as front-end developer of the website. Data Days is the
+              first data science competition of the computer engineering
+              department.
             </p>
           ),
         },
@@ -132,11 +147,9 @@ const data = {
               <a href="https://locsharif.com" target="_blank">
                 LoC
               </a>
-              &nbsp; as the <b>only</b> front-end developer of the website. League of Coders (LOC) is a programming
-              event born
-              at the
-              Computer Engineering Department of the Sharif University of Technology, aiming to create familiarity and
-              increase knowledge of Java programming and topics of hardware, blockchain, and machine learning for
+              &nbsp; as the <b>only</b> front-end developer of the website. LOC
+              is an event aiming to create familiarity and increase knowledge of
+              Java programming and topics of hardware, blockchain and ML for
               computer science and engineering students.
             </p>
           ),
@@ -157,11 +170,7 @@ const data = {
               science and engineering. The Winter Seminar Series (WSS) has been
               built to gather successful Iranians from all around the world and
               create a professional community in computer science and
-              engineering topics . Over the years, this seminar has grown to
-              become one of the best events in the Sharif University of
-              Technology. WSS is for everyone who works on or interested in any
-              computer science topics and wants to share and express his ideas
-              and research.
+              engineering topics.
             </p>
           ),
         },
@@ -177,9 +186,7 @@ const data = {
               </a>
               &nbsp; as member of graphic team. Sharif AI Challenge is a
               programming competition for all who are interested in artificial
-              intelligence. This competition is held in two phases annually.
-              Including an online and an on-site phase in which competitors will
-              compete in teams of three in a game designed by technical team.
+              intelligence.
             </p>
           ),
         },
@@ -217,8 +224,8 @@ const data = {
       content: (
         <div>
           Let start with a sentence from Kyle Simpson:
-          <br/> "When developers encounter confusion, they usually blame the
-          language(JavaScript) instead of their lack of understanding." <br/>
+          <br /> "When developers encounter confusion, they usually blame the
+          language(JavaScript) instead of their lack of understanding." <br />
           JS (I prefer to say instead of JavaScript), the language which created
           in only 10 days but conquer the world, is a language with capability
           of using in both frontend and backend and I sometimes code in it just
@@ -231,10 +238,10 @@ const data = {
       title: 'Linux',
       content: (
         <div>
-          I want to start with a sentence from Linus Torvalds: <br/>
+          I want to start with a sentence from Linus Torvalds: <br />
           "A computer is like air conditioning, it becomes useless if you open
           windows."
-          <br/> I've worked with linux since 2020. I prefer it to linux because
+          <br /> I've worked with linux since 2020. I prefer it to linux because
           it is optimal in using system resources as windows doesn't. Also linux
           is safer than windows and you can monitor everything you want. For me,
           installation of tools is easier in Linux. All of my needs, meets in
@@ -249,9 +256,9 @@ function App() {
   return (
     <div className="App">
       <div className="App-body">
-        <Header/>
-        {data.sections.map(({title, cards}) => (
-          <Section title={title} cards={cards}/>
+        <Header />
+        {data.sections.map(({ title, cards }) => (
+          <Section title={title} cards={cards} />
         ))}
         {/*<DevStory/>*/}
         <div className="skills container">
@@ -259,12 +266,12 @@ function App() {
             <h2>Interests and Skills</h2>
           </header>
           <div className="skills-body">
-            {data.skills.map(({icon, title, content}) => (
-              <Skill icon={icon} title={title} content={content}/>
+            {data.skills.map(({ icon, title, content }) => (
+              <Skill icon={icon} title={title} content={content} />
             ))}
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   )

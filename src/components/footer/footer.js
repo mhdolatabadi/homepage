@@ -6,11 +6,11 @@ export function Footer() {
       <footer className="container">
         <ul className="icons">
           <p>
-            &copy;2019-2022 MohammadHossein Dolatabadi.
+            &copy;2019-2023 MohammadHossein Dolatabadi.
             <br />
             You could contact me at&nbsp;
-            <a href="mailto:mhdolatabadia@ce.sharif.edu">
-              mhdolatabadia@ce.sharif.edu
+            <a href="mailto:m.h.dolatabadi.a@gmail.com">
+              m.h.dolatabadi.a@gmail.com
             </a>
           </p>
           <div
@@ -21,7 +21,7 @@ export function Footer() {
             }}
           >
             <div style={{ marginBottom: '20px' }}>
-              Social media: @mhdolatabadi|@mhdolatabadia
+              Social media: @mhdolatabadi
             </div>
             <li>
               <a
@@ -49,7 +49,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                href="https://telegram.me/mhdolatabadia"
+                href="https://telegram.me/mhdolatabadi"
                 className="fab fa-telegram-plane"
               >
                 <span></span>
