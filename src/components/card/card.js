@@ -10,8 +10,9 @@ export function Card({title, duration, content, picture}) {
         <h4>
           <b>{duration}</b>
         </h4>
-
-        {content}
+        <p>
+          {content}
+        </p>
       </section>
     </div>
 

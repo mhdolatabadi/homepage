@@ -68,7 +68,7 @@ const sahab = {
 const hardwar = {
   title: 'Hardwar',
   duration: '2023',
-  picture: 'hardwar.jpeg',
+  picture: 'hardwar2.jpg',
 
   content: (
     <p>
@@ -183,28 +183,23 @@ export const data = {
   ],
   skills: [
     {
-      icon: 'chalkboard-teacher',
-      title: 'Teaching',
-      content: (
-        <div>
-          I love teaching. I have been teaching math and physics for high school
-          students since 3 years ago. Teaching is a part of my life and gives me
-          more energy to do other things. I also tried teaching assistant for
-          Advanced programming course twice and it was lovely.
-        </div>
-      ),
-    },
-    {
       icon: 'cogs',
       title: 'Technical Skills',
       content: (
         <div>
-          I'm experienced in web development (both back-end and front-end). I do
-          many project using javascript frameworks and libraries like Vue.js,
-          React.js, Node.js and Nest.js. I'm also familiar with clean code,
-          object-oriented programming, functional programming and design
-          patterns. I've been working with Unix-based operating systems like
-          Linux since 2020.
+          I'm experienced in web development (both back-end and front-end).
+          <br />
+          <br />
+          I do many project using javascript frameworks and libraries like
+          Vue.js, React.js, Node.js and Nest.js.
+          <br />
+          <br />
+          I'm also familiar with clean code, object-oriented programming,
+          functional programming and design patterns.
+          <br />
+          <br />
+          I've been working with Unix-based operating systems like Linux since
+          2020.
         </div>
       ),
     },
@@ -214,37 +209,11 @@ export const data = {
       content: (
         <div>
           Time flies when I do programming. There are few other activities that
-          have the same feeling. I sometimes do programming just for fun. There
-          are some programming languages like C, C++, Java, Python and swift, i
-          have programmed in them but I always prefer JavaScript.
-        </div>
-      ),
-    },
-    {
-      icon: 'gamepad',
-      title: 'Hobbies',
-      content: (
-        <div>
-          I enjoy watching every professional sport, especially football. I'm a
-          fan of FC Bayern. I also love playing football games like FIFA (since
-          FIFA98!). I played football computer games most of the time when I was
-          a teenager. Now i love to play futsal with friends(this is another
-          thing which in it time flies:D)
-        </div>
-      ),
-    },
-    {
-      icon: 'js',
-      title: 'JavaScript',
-      content: (
-        <div>
-          Let start with a sentence from Kyle Simpson:
-          <br /> "When developers encounter confusion, they usually blame the
-          language(JavaScript) instead of their lack of understanding." <br />
-          JS (I prefer to say instead of JavaScript), the language which created
-          in only 10 days but conquer the world, is a language with capability
-          of using in both frontend and backend and I sometimes code in it just
-          for fun!
+          have the same feeling. I sometimes do programming just for fun.
+          <br />
+          <br />
+          There are some programming languages like C, Java and Python, I have
+          programmed in them.
         </div>
       ),
     },
@@ -256,10 +225,14 @@ export const data = {
           I want to start with a sentence from Linus Torvalds: <br />
           "A computer is like air conditioning, it becomes useless if you open
           windows."
-          <br /> I've worked with linux since 2020. I prefer it to linux because
-          it is optimal in using system resources as windows doesn't. Also linux
-          is safer than windows and you can monitor everything you want. For me,
-          installation of tools is easier in Linux. All of my needs, meets in
+          <br />
+          <br />
+          I've worked with linux since 2020. I prefer to use it because it's
+          optimal in using system resources as windows doesn't. Also linux is
+          safer than windows and you can monitor everything you want.
+          <br />
+          <br />
+          For me, installation of tools is easier in Linux. All of my needs, meets in
           Linux, and programming in it is so fun.
         </div>
       ),

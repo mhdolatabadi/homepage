@@ -52,6 +52,8 @@ body {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   background: url(../public/header6.jpg);
+  background-color: black;
+  backdrop-filter: blur(7px);
   background-size: 100% 100%;
   background-repeat: repeat;
   overflow: hidden;
