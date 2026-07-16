@@ -1,0 +1,7 @@
+organization=mhdolatabadi
+projectKey=home:page
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.62212
+dashboardUrl=https://sonarcloud.io/dashboard?id=home%3Apage
+ceTaskId=AZZNymrfCUOUXv2id7Xp
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZZNymrfCUOUXv2id7Xp
