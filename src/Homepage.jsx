@@ -13,18 +13,21 @@ const C = {
 };
 
 // ─── Images — served from /public ───
+// PUBLIC_URL keeps these correct wherever the site is mounted: "" in dev,
+// "." on GitHub Pages under /homepage/. Absolute "/x.jpg" paths 404 on a subpath.
+const BASE = process.env.PUBLIC_URL || "";
 const IMG = {
-  profile: "/profile-picture.jpg",
-  sharif: "/sharif.svg",
-  sampad: "/sampad.svg",
-  weblite: "/weblite.svg",
-  sahab: "/sahab.jpeg",
-  hardwar: "/hardwar2.jpg",
-  gamein: "/gamein.jpeg",
-  datadays: "/datadays.jpeg",
-  loc: "/loc.jpeg",
-  wss: "/wss.jpg",
-  aic: "/aic.jpg",
+  profile: `${BASE}/profile-picture.jpg`,
+  sharif: `${BASE}/sharif.svg`,
+  sampad: `${BASE}/sampad.svg`,
+  weblite: `${BASE}/weblite.svg`,
+  sahab: `${BASE}/sahab.jpeg`,
+  hardwar: `${BASE}/hardwar2.jpg`,
+  gamein: `${BASE}/gamein.jpeg`,
+  datadays: `${BASE}/datadays.jpeg`,
+  loc: `${BASE}/loc.jpeg`,
+  wss: `${BASE}/wss.jpg`,
+  aic: `${BASE}/aic.jpg`,
 };
 
 
