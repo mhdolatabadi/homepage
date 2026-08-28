@@ -4,11 +4,13 @@ import * as THREE from "three";
 // ─── Palette: night lapis + gold ───
 const C = {
   night: "#080a14",
+  nightRGB: "8,10,20", // rgb() of `night`, for shadows that need custom alpha
   lapis: "#121629",
   gold: "#d9a441",
   goldSoft: "#f0d9a8",
   ink: "#e8e6df",
   faded: "#8b8fa3",
+  tagline: "#b9bccd",
   line: "rgba(217,164,65,0.16)",
 };
 
@@ -284,6 +286,13 @@ export default function Homepage() {
   const t = DICT[lang];
   const rtl = t.dir === "rtl";
 
+  // Keep the document's language/direction in sync so screen readers use
+  // the right pronunciation rules for whichever language is showing.
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = t.dir;
+  }, [lang, t.dir]);
+
   // 3D scene — GPU-shaded spiral galaxy with differential rotation
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -553,8 +562,8 @@ export default function Homepage() {
   }, [lang]);
 
   const pad = "clamp(20px, 6vw, 72px)";
-  const shadowStrong = "0 2px 4px rgba(8,10,20,.9), 0 8px 30px rgba(8,10,20,.95)";
-  const shadowSoft = "0 1px 3px rgba(8,10,20,.95), 0 4px 18px rgba(8,10,20,.8)";
+  const shadowStrong = `0 2px 4px rgba(${C.nightRGB},.9), 0 8px 30px rgba(${C.nightRGB},.95)`;
+  const shadowSoft = `0 1px 3px rgba(${C.nightRGB},.95), 0 4px 18px rgba(${C.nightRGB},.8)`;
   const bodyFont = rtl ? "'Vazirmatn', system-ui, sans-serif" : "'Inter', system-ui, sans-serif";
   const displayFont = rtl ? "'Vazirmatn', sans-serif" : "'Unbounded', sans-serif";
 
@@ -580,15 +589,15 @@ export default function Homepage() {
         }
         .card {
           transition: border-color .4s cubic-bezier(.16,1,.3,1), transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s;
-          will-change: transform;
         }
-        .card:hover {
+        .card:hover, .card:focus-within {
           border-color: rgba(217,164,65,.55) !important;
           transform: translateY(-6px);
           box-shadow: 0 18px 50px -18px rgba(217,164,65,.28);
+          will-change: transform;
         }
-        .navlink { color: ${C.faded}; text-decoration: none; font-size: 13px; letter-spacing: .1em; transition: color .3s; }
-        nav .navlink, nav span { text-shadow: 0 1px 6px rgba(8,10,20,.9); }
+        .navlink { display: inline-block; color: ${C.faded}; text-decoration: none; font-size: 13px; letter-spacing: .1em; padding: 15px 4px; margin: -15px -4px; transition: color .3s; }
+        nav .navlink, nav span { text-shadow: 0 1px 6px rgba(${C.nightRGB},.9); }
         .navlink:hover, .navlink:focus-visible { color: ${C.goldSoft}; }
         a:focus-visible, button:focus-visible { outline: 2px solid ${C.gold}; outline-offset: 3px; border-radius: 4px; }
         .langbtn {
@@ -605,7 +614,7 @@ export default function Homepage() {
       <div aria-hidden="true" style={{ position: "fixed", inset: 0, zIndex: 0, background: "radial-gradient(ellipse 60% 45% at 50% 42%, rgba(217,164,65,0.07), transparent 70%)" }} />
       <canvas ref={canvasRef} aria-hidden="true" style={{ position: "fixed", inset: 0, zIndex: 0, opacity: loaded ? 1 : 0, transition: "opacity 1.6s ease" }} />
       {/* vignette scrim — sits above the canvas: galaxy stays bright mid-screen, edges darken where text sits */}
-      <div aria-hidden="true" style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", background: "radial-gradient(ellipse 70% 55% at 50% 48%, transparent 0%, rgba(8,10,20,.45) 60%, rgba(8,10,20,.88) 100%)" }} />
+      <div aria-hidden="true" style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", background: `radial-gradient(ellipse 70% 55% at 50% 48%, transparent 0%, rgba(${C.nightRGB},.45) 60%, rgba(${C.nightRGB},.88) 100%)` }} />
 
       {/* Nav */}
       <nav style={{ position: "relative", zIndex: 2, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, padding: `28px ${pad}`, flexWrap: "wrap" }}>
@@ -635,7 +644,7 @@ export default function Homepage() {
             inset: 0,
             zIndex: 0,
             pointerEvents: "none",
-            background: `linear-gradient(to ${rtl ? "left" : "right"}, rgba(8,10,20,.92) 0%, rgba(8,10,20,.72) 40%, rgba(8,10,20,.25) 72%, transparent 100%)`,
+            background: `linear-gradient(to ${rtl ? "left" : "right"}, rgba(${C.nightRGB},.92) 0%, rgba(${C.nightRGB},.72) 40%, rgba(${C.nightRGB},.25) 72%, transparent 100%)`,
           }}
         />
         <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column" }}>
@@ -651,7 +660,7 @@ export default function Homepage() {
           <br />
           <span style={{ color: C.goldSoft }}>{t.lastName}</span>
         </h1>
-        <p className="fadeup" style={{ color: "#b9bccd", fontSize: "clamp(1rem, 2vw, 1.2rem)", maxWidth: 580, marginTop: 26, lineHeight: 1.8, animationDelay: ".5s", textShadow: shadowSoft }}>
+        <p className="fadeup" style={{ color: C.tagline, fontSize: "clamp(1rem, 2vw, 1.2rem)", maxWidth: 580, marginTop: 26, lineHeight: 1.8, animationDelay: ".5s", textShadow: shadowSoft }}>
           {t.tagline}
         </p>
         <a href="#education" className="fadeup" style={{ marginTop: 44, color: C.gold, textDecoration: "none", fontSize: 14, letterSpacing: ".12em", animationDelay: ".7s", textShadow: shadowSoft }}>
@@ -684,6 +693,7 @@ export default function Homepage() {
                           <img
                             src={card.picture}
                             alt=""
+                            loading="lazy"
                             style={{ width: 40, height: 40, borderRadius: 10, objectFit: "cover", background: "#fff", padding: 3, flexShrink: 0 }}
                           />
                         )}
@@ -721,7 +731,7 @@ export default function Homepage() {
         <h2 className="reveal" style={{ fontFamily: displayFont, fontSize: "clamp(1.6rem, 4vw, 2.6rem)", fontWeight: 500, maxWidth: 680, lineHeight: 1.35 }}>
           {t.contactTitle} <span style={{ color: C.gold }}>{t.contactAccent}</span>
         </h2>
-        <a className="reveal" href={`mailto:${EMAIL}`} dir="ltr" style={{ display: "inline-block", marginTop: 26, color: C.goldSoft, textDecoration: "none", fontSize: 16, borderBottom: `1px solid ${C.line}`, paddingBottom: 3, transitionDelay: "100ms" }}>
+        <a className="reveal" href={`mailto:${EMAIL}`} dir="ltr" style={{ display: "inline-block", marginTop: 12, marginLeft: -4, marginRight: -4, color: C.goldSoft, textDecoration: "none", fontSize: 16, borderBottom: `1px solid ${C.line}`, padding: "14px 4px", transitionDelay: "100ms" }}>
           {EMAIL}
         </a>
         <div className="reveal" style={{ display: "flex", gap: 24, marginTop: 34, flexWrap: "wrap", transitionDelay: "180ms" }}>
