@@ -535,7 +535,10 @@ export default function Homepage() {
                         <span className="seam" aria-hidden="true" />
                         {card.picture && <img src={card.picture} alt="" loading="lazy" className="ledger-logo" />}
                         <h3 className="ledger-title">{card.title}</h3>
-                        <span className="ledger-duration">{card.duration}</span>
+                        <span className="ledger-duration">
+                          {card.duration}
+                          {card.link && <span aria-hidden="true" style={{ marginInlineStart: 6, opacity: 0.75 }}>↗</span>}
+                        </span>
                       </div>
                       <p className="ledger-desc">{card.desc}</p>
                     </Tag>
